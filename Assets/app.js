@@ -92,36 +92,205 @@
 // console.log("Your input in title case is: " + titleCaseInput);
 
 // Question 12
+
+// var num = 35.36;
+// var numString = num.toString().replace('.', '');
+// console.log(numString);
+
 // Question 13
+
+// var username = prompt("Enter a username:");
+// var isValid = true;
+
+// for (var i = 0; i < username.length; i++) {
+//     var charCode = username.charCodeAt(i);
+//     if (charCode === 33 || charCode === 44 || charCode === 46 || charCode === 64) {
+//         isValid = false;
+//         break;
+//     }
+// }
+
+// if (!isValid) {
+//     alert("Invalid username! Please avoid using special symbols like @ , . !");
+// } else {
+//     alert("Username accepted: " + username);
+// }
+
 // Question 14
+
+// var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+// var userInput = prompt("Enter an item to search:").toLowerCase();
+
+// var itemFound = A.some(item => item.toLowerCase() === userInput);
+
+// if (itemFound) {
+//     alert(userInput + " is available in the list.");
+// } else {
+//     alert(userInput + " is not available in the list.");
+// }
+
 // Question 15
+
+// var password = prompt("Enter your password:");
+// var isValid = false;
+
+// if (password.length >= 6) {
+//     if (!(password.charCodeAt(0) >= 48 && password.charCodeAt(0) <= 57)) {
+//         var hasAlphabet = false;
+//         var hasNumber = false;
+//         for (var i = 0; i < password.length; i++) {
+//             var charCode = password.charCodeAt(i);
+//             if ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)) {
+//                 hasAlphabet = true;
+//             }
+//             else if (charCode >= 48 && charCode <= 57) {
+//                 hasNumber = true;
+//             }
+
+//             if (hasAlphabet && hasNumber) {
+//                 isValid = true;
+//                 break;
+//             }
+//         }
+//     }
+// }
+
+// if (isValid) {
+//     alert("Password is valid.");
+// } else {
+//     alert("Invalid password! \nPassword must:\n- Be at least 6 characters long\n- Start with an alphabet\n- Contain both letters and numbers.");
+// }
+
 // Question 16
+
+// var university = "University of Karachi";
+// var universityArray = university.split("");
+
+// for (var i = 0; i < universityArray.length; i++) {
+//     console.log(universityArray[i]);
+// }
+
 // Question 17
+
+// var userInput = prompt("Enter a string:");
+// var lastCharacter = userInput.charAt(userInput.length - 1);
+
+// alert("The last character is: " + lastCharacter);
+
 // Question 18
 
+// var text = "The quick brown fox jumps over the lazy dog";
+// var lowerCaseText = text.toLowerCase();
+// var words = lowerCaseText.split(" ");
+// var count = 0;
+
+// for (var i = 0; i < words.length; i++) {
+//     if (words[i] === "the") {
+//         count++;
+//     }
+// }
+
+// console.log("The word 'the' occurs " + count + " times.");
+
+// Chapter 26 To 30
+
+// Question 1
+
+// var userInput = prompt("Enter a positive integer:");
+// var number = parseFloat(userInput);
+
+// if (number >= 0 && Number.isFinite(number)) {
+//     console.log("Number: " + number);
+//     console.log("Round Off Value: " + Math.round(number));
+//     console.log("Floor Value: " + Math.floor(number));
+//     console.log("Ceil Value: " + Math.ceil(number));
+// } else {
+//     console.log("Please enter a valid positive integer.");
+// }
+
+// Question 2
+
+// var userInput = prompt("Enter a negative floating point number:");
+// var number = parseFloat(userInput);
+
+// if (number < 0 && Number.isFinite(number)) {
+//   console.log("<h2>Number: " + number + "</h2>");
+//   console.log("<h2>Round Off Value: " + Math.round(number) + "</h2>");
+//   console.log("<h2>Floor Value: " + Math.floor(number) + "</h2>");
+//   console.log("<h2>Ceil Value: " + Math.ceil(number) + "</h2>");
+// } else {
+//   console.log(
+//     "<h2>Please enter a valid negative floating point number.</h2>"
+//   );
+// }
+
+// Question 3
+
+// var userInput = prompt("Enter a number:");
+// var number = parseFloat(userInput); 
+
+// var absoluteValue = Math.abs(number);
+
+// console.log("<h2>Absolute value of " + number + " is " + absoluteValue + ".</h2>");
+
+// Question 4
+
+// var diceValue = Math.floor(Math.random() * 6) + 1;
+// console.log("Dice rolled: " + diceValue);
+
+// Question 5
+
+// var tossValue = Math.random();
+//         var coinResult = tossValue < 0.5 ? "Heads" : "Tails"; 
+//         console.log("Coin tossed: " + coinResult);
+
+// Question 6
+
+// var randomNumber = Math.floor(Math.random() * 100) + 1;
+//         console.log("Random number between 1 and 100: " + randomNumber);
+
+// Question 7
+
+// var userInput = prompt("Please enter your weight (e.g., 50, 50kgs, 50.2kgs, 50.2kilograms):");
+        
+//         var weightMatch = userInput.match(/(\d*\.?\d+)\s*(kgs?|kilograms)?/i);
+
+//         if (weightMatch) {
+//             var weight = parseFloat(weightMatch[1]);
+
+//             console.log("<h2>Your weight is: " + weight + " kg</h2>");
+//         } else {
+//             console.log("<h2>Please enter a valid weight.</h2>");
+//         }
+
+// Question 8
+
+// var secretNumber = Math.floor(Math.random() * 10) + 1;
+
+//         var userInput = prompt("Guess the secret number between 1 and 10:");
+
+//         var userGuess = parseInt(userInput);
+
+//         if (userGuess === secretNumber) {
+//             alert("Congratulations! You guessed the secret number: " + secretNumber);
+//         } else {
+//             alert("Sorry, the secret number was: " + secretNumber);
+//         }
 
 
+// Chapter 31 To 34
 
-var age = prompt("Enter Your Age");
-
-function ageCalculator(stages) {
-  if (age <= 4) {
-    console.log("You Are an Infant");
-  } else if (age <= 15) {
-    console.log("You Are a School Boy");
-  } else if (age <= 25) {
-    console.log("You Are a Lover");
-  } else if (age <= 35) {
-    console.log("You Are a Soldier");
-  } else if (age <= 45) {
-    console.log("You Are a Justice Lover");
-  } else if (age <= 60) {
-    console.log("You Are an Old Man");
-  } else if (age <= 90) {
-    console.log("Extreme Old Age");
-  } else {
-    console.log("You Are Close to Dying");
-  }
-}
-
-ageCalculator(age);
+// Question 1
+// Question 2
+// Question 3
+// Question 4
+// Question 5
+// Question 6
+// Question 7
+// Question 8
+// Question 9
+// Question 10
+// Question 11
+// Question 12
+// Question 13
+// Question 14
