@@ -281,16 +281,369 @@
 // Chapter 31 To 34
 
 // Question 1
+
+// var now = new Date();
+// console.log("Current Date: " + now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate());
+// console.log("Current Time: " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds());
+
 // Question 2
+
+// var now = new Date();
+// var monthNames = [
+//   "January", "February", "March", "April", "May", "June",
+//   "July", "August", "September", "October", "November", "December"
+// ];
+// var currentMonth = monthNames[now.getMonth()];
+// alert("Current Month: " + currentMonth);
+
 // Question 3
+
+// var now = new Date();
+// var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+// var currentDay = dayNames[now.getDay()];
+// alert("Current Day: " + currentDay);
+
 // Question 4
+
+// var now = new Date();
+// var day = now.getDay(); 
+
+// if (day === 0 || day === 6) {
+//   alert("It’s Fun day");
+// } else {
+//   alert("It’s a regular day");
+// }
+
 // Question 5
+
+// var now = new Date();
+// var date = now.getDate();
+
+// if (date < 16) {
+//   alert("First fifteen days of the month");
+// } else {
+//   alert("Last days of the month");
+// }
+
 // Question 6
+
+// var currentDate = new Date();
+// var minutesSince1970 = Math.floor(currentDate.getTime() / (1000 * 60));
+// console.log("Minutes since Jan. 1, 1970:", minutesSince1970);
+
 // Question 7
+
+// var now = new Date();
+// var hours = now.getHours();
+
+// if (hours < 12) {
+//   alert("It's AM");
+// } else {
+//   alert("It's PM");
+// }
+
 // Question 8
+
+// var laterDate = new Date(2020, 11, 31); 
+// console.log("Later Date:", laterDate);
+
 // Question 9
+
+// var ramadanStartDate = new Date(2015, 5, 18);
+// var currentDate = new Date();
+// var differenceInMilliseconds = currentDate - ramadanStartDate;
+// var daysPassed = Math.floor(differenceInMilliseconds / (1000 * 60 * 60 * 24));
+// alert("Days since 1st Ramadan: " + daysPassed);
+
 // Question 10
+
+// var referenceDate = new Date(2015, 5, 18); 
+// var startOf2015 = new Date(2015, 0, 1); 
+// var differenceInMilliseconds = referenceDate - startOf2015;
+// var secondsElapsed = Math.floor(differenceInMilliseconds / 1000);
+// console.log("Seconds elapsed between the beginning of 2015 and June 18, 2015: " + secondsElapsed);
+
 // Question 11
+
+// var currentDate = new Date();
+// var currentHours = currentDate.getHours();
+// console.log("Current Hours:", currentHours);
+// currentDate.setHours(currentHours + 1);
+// console.log("Updated Date and Time (1 hour ahead):", currentDate);
+
 // Question 12
+
+// var currentDate = new Date();
+// currentDate.setFullYear(currentDate.getFullYear() - 100);
+// alert("Date 100 years back: " + currentDate.toDateString());
+
 // Question 13
+
+// var age = prompt("Please enter your age:");
+// var currentYear = new Date().getFullYear();
+// var birthYear = currentYear - age;
+// console.log("Your birth year is: " + birthYear);
+
 // Question 14
+
+// var customerName = prompt("Enter your name:");
+// var currentMonth = prompt("Enter the current month:");
+// var numberOfUnits = parseFloat(prompt("Enter the number of units consumed:"));
+// var chargesPerUnit = parseFloat(prompt("Enter the charges per unit:"));
+// var latePaymentSurcharge = parseFloat(prompt("Enter the late payment surcharge:"));
+// var netAmountPayable = (numberOfUnits * chargesPerUnit).toFixed(2);
+// var grossAmountPayable = (parseFloat(netAmountPayable) + latePaymentSurcharge).toFixed(2);
+// console.log("K-Electric Bill");
+// console.log("Customer Name: " + customerName);
+// console.log("Current Month: " + currentMonth);
+// console.log("Number of Units: " + numberOfUnits);
+// console.log("Charges per Unit: " + chargesPerUnit.toFixed(2));
+// console.log("Net Amount Payable (within Due Date): " + netAmountPayable);
+// console.log("Late Payment Surcharge: " + latePaymentSurcharge.toFixed(2));
+// console.log("Gross Amount Payable (after Due Date): " + grossAmountPayable);
+
+
+// Chapter 35 To 38
+
+// Question 1
+
+// function displayCurrentDateTime() {
+//     var now = new Date();
+//     var date = now.toDateString(); 
+//     var time = now.toTimeString(); 
+    
+//     console.log("Current Date: " + date);
+//     console.log("Current Time: " + time);
+//   }
+//   displayCurrentDateTime();
+  
+// Question 2
+
+// function greetUser(firstName, lastName) {
+//     var fullName = firstName + " " + lastName; 
+//     console.log("Hello, " + fullName + "! Welcome!");
+//   }
+  
+//   greetUser("John", "Doe");
+  
+// Question 3
+
+// function addTwoNumbers() {
+//     var firstNumber = parseFloat(prompt("Enter the first number:"));
+//     var secondNumber = parseFloat(prompt("Enter the second number:"));
+  
+//     var sum = firstNumber + secondNumber;
+  
+//     return sum;
+//   }
+  
+//   var result = addTwoNumbers();
+//   console.log("The sum of the two numbers is: " + result);
+  
+// Question 4
+
+// function calculator(num1, num2, operator) {
+//     var result;
+  
+  
+//     if (operator === '+') {
+//       result = num1 + num2;
+//     } else if (operator === '-') {
+//       result = num1 - num2;
+//     } else if (operator === '*' || operator === 'x') {
+//       result = num1 * num2;
+//     } else if (operator === '/') {
+//       if (num2 !== 0) {
+//         result = num1 / num2;
+//       } else {
+//         return "Error: Division by zero is not allowed.";
+//       }
+//     } else {
+//       return "Error: Invalid operator. Please use +, -, *, or /.";
+//     }
+  
+    
+//     console.log(`The result of ${num1} ${operator} ${num2} is: ${result}`);
+//     return result; 
+//   }
+  
+//   calculator(10, 5, '+'); 
+//   calculator(10, 5, '-');
+//   calculator(10, 5, '*'); 
+//   calculator(10, 5, '/'); 
+//   calculator(10, 0, '/');
+//   calculator(10, 5, 'x'); 
+//   calculator(10, 5, '%');
+  
+// Question 5
+
+// function square(num) {
+//     return num * num;
+//   }
+//   var result = square(5);
+//   console.log("The square of 5 is: " + result);
+  
+// Question 6
+
+// function factorial(n) {
+//     if (n < 0) {
+//       return "Error: Factorial is not defined for negative numbers.";
+//     }
+    
+//     if (n === 0) {
+//       return 1;
+//     }
+    
+//     return n * factorial(n - 1);
+//   }
+  
+//   var number = 5; 
+//   var result = factorial(number);
+//   console.log(`The factorial of ${number} is: ${result}`);
+  
+// Question 7
+
+// function displayCounting(start, end) {
+//     if (start > end) {
+//       console.log("Error: Start number should be less than or equal to end number.");
+//       return;
+//     }
+  
+//     for (var i = start; i <= end; i++) {
+//       console.log(i);
+//     }
+//   }
+  
+//   var startNumber = 1;
+//   var endNumber = 10; 
+//   displayCounting(startNumber, endNumber);
+  
+// Question 8
+
+// function calculateHypotenuse(base, perpendicular) {
+//     function calculateSquare(x) {
+//       return x * x;
+//     }
+  
+//     var baseSquare = calculateSquare(base);
+//     var perpendicularSquare = calculateSquare(perpendicular);
+  
+//     var hypotenuse = Math.sqrt(baseSquare + perpendicularSquare);
+    
+//     return hypotenuse;
+//   }
+  
+//   var base = 3;        
+//   var perpendicular = 4;
+//   var result = calculateHypotenuse(base, perpendicular);
+//   console.log(`The hypotenuse of the triangle is: ${result}`);
+  
+// Question 9
+
+// function calculateRectangleArea(width, height) {
+//     return width * height; 
+//   }
+  
+//   var area1 = calculateRectangleArea(5, 10); 
+//   console.log(`Area of rectangle (using values): ${area1}`);
+  
+//   var rectWidth = 8;   
+//   var rectHeight = 12; 
+//   var area2 = calculateRectangleArea(rectWidth, rectHeight);
+//   console.log(`Area of rectangle (using variables): ${area2}`);
+  
+// Question 10
+
+// function isPalindrome(str) {
+//     var normalizedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    
+//     var reversedStr = normalizedStr.split('').reverse().join('');
+  
+//     return normalizedStr === reversedStr;
+//   }
+  
+//   var testString1 = "madam";
+//   var testString2 = "hello";
+//   var testString3 = "A man, a plan, a canal: Panama";
+  
+//   console.log(`Is "${testString1}" a palindrome? ${isPalindrome(testString1)}`); 
+//   console.log(`Is "${testString2}" a palindrome? ${isPalindrome(testString2)}`); 
+//   console.log(`Is "${testString3}" a palindrome? ${isPalindrome(testString3)}`);
+  
+// Question 11
+
+// function capitalizeFirstLetter(str) {
+//     var words = str.split(' ');
+//     var capitalizedWords = words.map(word => {
+//       return word.charAt(0).toUpperCase() + word.slice(1);
+//     });
+//     return capitalizedWords.join(' ');
+//   }
+//   var exampleString = 'the quick brown fox';
+//   var result = capitalizeFirstLetter(exampleString);
+//   console.log(result); 
+  
+// Question 12
+
+// function findLongestWord(str) {
+//     var longestWord = '';
+//     var currentWord = '';
+  
+//     for (var i = 0; i < str.length; i++) {
+//       var char = str[i];
+  
+//       if (char === ' ' || i === str.length - 1) {
+//         if (i === str.length - 1) {
+//           currentWord += char;
+//         }
+//         if (currentWord.length > longestWord.length) {
+//           longestWord = currentWord;
+//         }
+//         currentWord = '';
+//       } else {
+//         currentWord += char;
+//       }
+//     }
+  
+//     return longestWord;
+//   }
+  
+//   var exampleString = 'Web Development Tutorial';
+//   var result = findLongestWord(exampleString);
+//   console.log(result); 
+  
+// Question 13
+
+// function countLetterOccurrences(str, letter) {
+//     var count = 0; 
+  
+//     for (var i = 0; i < str.length; i++) {
+//       if (str[i] === letter) {
+//         count++;
+//       }
+//     }
+  
+//     return count;
+//   }
+  
+//   var sampleString = 'JSResourceS.com';
+//   var letterToCount = 'o';
+//   var result = countLetterOccurrences(sampleString, letterToCount);
+//   console.log(`The letter '${letterToCount}' occurs ${result} times in the string.`);
+  
+// Question 14
+
+// function calcCircumference(radius) {
+//     var circumference = 2 * Math.PI * radius; 
+//     console.log(`The circumference is ${circumference.toFixed(2)}`);
+//   }
+  
+//   function calcArea(radius) {
+//     var area = Math.PI * radius * radius; 
+//     console.log(`The area is ${area.toFixed(2)}`); 
+//   }
+  
+//   var radius = 5; 
+//   calcCircumference(radius); 
+//   calcArea(radius);         
+  
